@@ -5,7 +5,7 @@ namespace _03.Infra.DataContext
 {
     public static class CustmerModelBuilderExtension
     {
-        public static void CustmerModelBuilder(this ModelBuilder modelBuilder)
+        public static void CustmerOnModelBuilderExtension(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Customer>().HasKey(cus => cus.Id);
             modelBuilder.Entity<Customer>().ToTable("Customers");
