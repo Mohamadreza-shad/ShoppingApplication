@@ -8,8 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\QueryServices\" />
-    <Folder Include="Interfaces\Repos\" />
-    <Folder Include="DTOs\" />
   </ItemGroup>
 
 </Project>

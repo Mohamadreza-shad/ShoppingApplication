@@ -13,6 +13,7 @@ namespace _01.Domain.Entities
         public string NationalCode { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
         public List<Address> Addresses { get; set; }
         public List<Order> Orders { get; set; }

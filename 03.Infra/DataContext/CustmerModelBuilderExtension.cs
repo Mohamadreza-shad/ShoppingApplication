@@ -25,6 +25,9 @@ namespace _03.Infra.DataContext
             modelBuilder.Entity<Customer>().Property(p => p.LastName)
                                            .HasMaxLength(20)
                                            .IsRequired();
+
+            modelBuilder.Entity<Customer>().Property(p => p.DateOfBirth).IsRequired();
+
             modelBuilder.Entity<Customer>()
                         .HasMany(xx => xx.Addresses)
                         .WithOne(xx => xx.Customer)
