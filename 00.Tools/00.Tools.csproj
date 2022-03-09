@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>_00.Tools</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DateTimeTools\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="ApiResponses\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
+</Project>

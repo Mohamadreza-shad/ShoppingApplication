@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>_01.Domain</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\QueryServices\" />
+    <Folder Include="Interfaces\Repos\" />
+    <Folder Include="DTOs\" />
+  </ItemGroup>
+
+</Project>

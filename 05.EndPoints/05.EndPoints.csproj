@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>_05.EndPoints</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\00.Tools\00.Tools.csproj" />
+    <ProjectReference Include="..\ApplicationServices\04.ApplicationServices.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Forms\" />
+  </ItemGroup>
+
+</Project>
