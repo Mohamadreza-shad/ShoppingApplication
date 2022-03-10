@@ -20,7 +20,7 @@ namespace _03.Infra.Repositories
             _dbSet = _context.Set<TEntity>();
         }
 
-        public async Task<TEntity> AddAsync(TEntity entity)
+        public async Task<TEntity> AddAndSaveAsync(TEntity entity)
         {
             await _dbSet.AddAsync(entity);
             await CommiteChangesAsync();
@@ -32,13 +32,13 @@ namespace _03.Infra.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task Delete(TEntity entity)
+        public async Task DeleteAndSaveAsync(TEntity entity)
         {
             _dbSet.Remove(entity);
             await CommiteChangesAsync();
         }
 
-        public async Task<TEntity> UpdateAsync(TEntity entity)
+        public async Task<TEntity> UpdateAndSaveAsync(TEntity entity)
         {
             _dbSet.Update(entity);
             await CommiteChangesAsync();

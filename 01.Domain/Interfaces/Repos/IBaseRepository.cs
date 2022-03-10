@@ -2,9 +2,9 @@
 {
     public interface IBaseRepository<TEntity,Tkey>
     {
-        Task<TEntity> AddAsync(TEntity entity);
-        Task Delete(TEntity entity);
+        Task<TEntity> AddAndSaveAsync(TEntity entity);
+        Task DeleteAndSaveAsync(TEntity entity);
         Task CommiteChangesAsync();
-        Task<TEntity> UpdateAsync(TEntity entity);
+        Task<TEntity> UpdateAndSaveAsync(TEntity entity);
     }
 }
