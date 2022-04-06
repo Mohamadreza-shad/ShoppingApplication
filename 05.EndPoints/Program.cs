@@ -1,15 +1,24 @@
+using _02.DomainServices.Configuration;
+using _03.Infra.Extensions;
+using _04.ApplicationServices.Configuration;
+using _05.EndPoints.Configuration;
+using MediatR;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.RegisterAppServices();
+builder.Services.RegisterInfraStructureServices();
+builder.Services.RegisterDomainServiceExtension();
+builder.Services.RegisterEndpointServices();
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

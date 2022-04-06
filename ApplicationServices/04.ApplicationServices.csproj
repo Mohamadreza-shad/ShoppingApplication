@@ -9,9 +9,4 @@
     <ProjectReference Include="..\02.DomainServices\02.DomainServices.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Mappers\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
-
 </Project>

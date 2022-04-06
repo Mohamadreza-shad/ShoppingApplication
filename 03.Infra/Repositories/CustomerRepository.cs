@@ -22,14 +22,14 @@ namespace _03.Infra.Repositories
         public async Task<CustomerOutputDto> CreateCustomer(CustomerInputDto inputDto)
         {
             Customer customer = _mapper.Map<Customer>(inputDto);
-            Customer customerToReturn = await AddAsync(customer);
+            Customer customerToReturn = await AddAndSaveAsync(customer);
             return _mapper.Map<CustomerOutputDto>(customerToReturn);
         }
 
         public async Task DeleteCustomer(Guid customerId)
         {
             Customer customer = await GetByIdAsync(customerId);
-            await Delete(customer);
+            await DeleteAndSaveAsync(customer);
         }
 
         public async Task<Customer> GetByIdAsync(Guid customerId)
@@ -41,7 +41,7 @@ namespace _03.Infra.Repositories
         {
             Customer customer = await GetByIdAsync(customerId);
             customer = _mapper.Map<Customer>(inputDto);
-            Customer customerToReturn = await UpdateAsync(customer);
+            Customer customerToReturn = await UpdateAndSaveAsync(customer);
             
             return _mapper.Map<CustomerOutputDto>(customerToReturn);
         }
